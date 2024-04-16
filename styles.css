@@ -1,0 +1,77 @@
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-items li {
+    margin: 0 10px;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-items li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hide checkbox */
+.menu-items input[type="checkbox"] {
+    display: none;
+}
+
+/* Responsive menu */
+@media only screen and (max-width: 768px) {
+    .menu-items {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-items input[type="checkbox"]:checked + .menu-items {
+        display: flex;
+    }
+}
+.nav{
+    align-self: center;
+}
+marquee{
+    color: black;
+    font-family: cursive;
+    font-size: 25;
+}

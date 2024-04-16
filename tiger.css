@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2F1B12;
+    color: aliceblue;
+    text-align: center;
+    font-size: 25;
+}
+.wave-header{
+    min-height: 100vh;
+    width: 100%;
+    background: orange;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.wave-header h1{
+   font-size: 4em;
+   color: #fff;
+    font-family: 'raleway';
+    font-weight: 700;
+}
+marquee{
+    color: white;
+    font-family: cursive;
+}
+
+table, th, td {
+  border: 1px solid white;
+    background: black;
+     height: 35;
+}
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.menu {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-items li {
+    margin: 0 10px;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-items li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hide checkbox */
+.menu-items input[type="checkbox"] {
+    display: none;
+}
+
+/* Responsive menu */
+@media only screen and (max-width: 768px) {
+    .menu-items {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-items input[type="checkbox"]:checked + .menu-items {
+        display: flex;
+    }
+}
+.nav{
+    align-self: center;
+}
+/* Style for the image container */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  /* Style for the image */
+  .image-container img {
+    transition: transform 0.3s ease;
+      height: 70vh;
+  }
+
+  /* Hover effect */
+  .image-container:hover img {
+    transform: translateY(-10px);
+  }
+/* Style for the overlay text */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hidden by default */
+  }
+
+  /* Show overlay text on hover */
+  .image-container:hover .overlay {
+    opacity: 1;
+  }

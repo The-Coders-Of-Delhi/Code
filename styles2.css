@@ -1,0 +1,35 @@
+/* Style for the image container */
+  .image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  /* Style for the image */
+  .image-container img {
+    transition: transform 0.3s ease;
+      height: 70vh;
+  }
+
+  /* Hover effect */
+  .image-container:hover img {
+    transform: translateY(-10px);
+  }
+/* Style for the overlay text */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Hidden by default */
+  }
+
+  /* Show overlay text on hover */
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
